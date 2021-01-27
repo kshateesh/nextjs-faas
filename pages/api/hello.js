@@ -14,7 +14,8 @@ export default (req, res) => {
     .then((data) => console.log(data))
     .catch((error) => console.error(error));
 
-  console.log("Test page app");
+  res.setHeader("Cache-Control", "s-maxage=1, stale-while-revalidate");
+
   res.statusCode = 200;
   res.json({ name: "John Doe" });
 };
