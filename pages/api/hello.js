@@ -3,15 +3,15 @@ const si = require("systeminformation");
 
 export default (req, res) => {
   si.osInfo()
-    .then((data) => console.log(data))
+    .then((data) => console.log(JSON.stringify(data)))
     .catch((error) => console.error(error));
 
   si.processes()
-    .then((data) => console.log(data))
+    .then((data) => console.log(JSON.stringify(data)))
     .catch((error) => console.error(error));
 
   si.dockerInfo()
-    .then((data) => console.log(data))
+    .then((data) => console.log(JSON.stringify(data)))
     .catch((error) => console.error(error));
 
   res.setHeader("Cache-Control", "s-maxage=1, stale-while-revalidate");
