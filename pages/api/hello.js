@@ -14,8 +14,18 @@ export default (req, res) => {
     .then((data) => console.log(JSON.stringify(data)))
     .catch((error) => console.error(error));
 
+  var request = require("request");
+  var options = {
+    method: "GET",
+    url: "https://5ff8565f10778b00170431fe.mockapi.io/builds",
+  };
+
   res.setHeader("Cache-Control", "s-maxage=1, stale-while-revalidate");
 
-  res.statusCode = 200;
-  res.json({ name: "John Doe" });
+  request(options, function (error, response) {
+    if (error) throw new Error(error);
+    console.log(response.body);
+    res.statusCode = 200;
+    res.json(response.body);
+  });
 };
