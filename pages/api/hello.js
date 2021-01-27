@@ -6,15 +6,7 @@ export default (req, res) => {
     .then((data) => console.log(data))
     .catch((error) => console.error(error));
 
-  si.currentLoad()
-    .then((data) => console.log(data))
-    .catch((error) => console.error(error));
-
   si.processes()
-    .then((data) => console.log(data))
-    .catch((error) => console.error(error));
-
-  si.services("*")
     .then((data) => console.log(data))
     .catch((error) => console.error(error));
 
