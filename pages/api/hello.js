@@ -20,7 +20,7 @@ export default (req, res) => {
     url: "https://5ff8565f10778b00170431fe.mockapi.io/builds",
   };
 
-  res.setHeader("Cache-Control", "s-maxage=10, stale-while-revalidate");
+  res.setHeader("Cache-Control", "s-maxage=20, stale-while-revalidate");
 
   request(options, function (error, response) {
     if (error) throw new Error(error);
