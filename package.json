@@ -1,17 +1,29 @@
 {
-  "name": "nextjs",
-  "version": "0.1.0",
-  "private": true,
   "scripts": {
+    "xdn": "xdn",
+    "xdn:dev": "xdn dev",
+    "xdn:build": "xdn build",
+    "xdn:deploy": "xdn deploy",
     "dev": "next dev",
     "build": "next build",
     "start": "next start"
   },
+  "name": "nextjs",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
     "next": "10.0.5",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "request": "^2.88.2",
     "systeminformation": "^5.0.4"
+  },
+  "devDependencies": {
+    "@xdn/cli": "^2.41.0",
+    "@xdn/core": "^2.41.0",
+    "@xdn/devtools": "^2.41.0",
+    "@xdn/next": "^2.41.0",
+    "@xdn/prefetch": "^2.41.0",
+    "@xdn/react": "^2.41.0"
   }
 }
