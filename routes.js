@@ -27,5 +27,6 @@ module.exports = new Router()
   .match("/service-worker.js", ({ serviceWorker }) => {
     return serviceWorker(".next/static/service-worker.js");
   })
+  .use(nextRoutes) // automatically adds routes for all files under /pages
   .prerender(getPrerenderRequests)
   .use(nextRoutes);

@@ -34,3 +34,5 @@ yarn-error.log*
 .vercel
 # XDN generated build directory
 .xdn
+# XDN generated build directory
+.xdn
